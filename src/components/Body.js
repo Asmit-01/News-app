@@ -37,7 +37,7 @@ const Body = (prop) => {
 
     const fetchMoreData = async () => {
         setpage(page + 1);
-        let d = await fetch(`https://newsapi.org/v2/top-headlines?category=${prop.category}&language=en&apiKey=b2f84ff73d804206925a0ce730f17f09&page=${page}`);
+        let d = await fetch(`https://newsapi.org/v2/top-headlines?category=${prop.category}&language=en&apiKey=-----api key-----&page=${page}`);
 
         let parsedD = await d.json();
         setArticle(article.concat(parsedD.articles));
@@ -51,7 +51,7 @@ const Body = (prop) => {
 
     const fetchItems = () => {
         axios
-            .get(`https://newsapi.org/v2/top-headlines?category=${prop.category}&language=en&apiKey=b2f84ff73d804206925a0ce730f17f09&page=${page}`)
+            .get(`https://newsapi.org/v2/top-headlines?category=${prop.category}&language=en&apiKey=-----api key-----&page=${page}`)
             .then((res) => {
                 // console.log(res);
                 setArticle(res.data.articles);
